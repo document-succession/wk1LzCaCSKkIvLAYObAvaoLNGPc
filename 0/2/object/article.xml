@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+  <front>
+    <journal-meta>
+      <journal-id/>
+      <journal-title-group>
+</journal-title-group>
+      <issn/>
+      <publisher>
+        <publisher-name/>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <title-group>
+        <article-title>Why try Digital Succession Identifiers?</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <contrib-id contrib-id-type="orcid">0000-0002-5014-4809</contrib-id>
+          <name>
+            <surname>Ellerman</surname>
+            <given-names>E. Castedo</given-names>
+          </name>
+          <email>castedo@castedo.com</email>
+        </contrib>
+      </contrib-group>
+      <pub-date date-type="eprint" publication-format="electronic" iso-8601-date="2022-08-24">
+        <day>24</day>
+        <month>8</month>
+        <year>2022</year>
+      </pub-date>
+      <permissions>
+        <copyright-statement>© 2022, Ellerman et al</copyright-statement>
+        <copyright-year>2022</copyright-year>
+        <copyright-holder>Ellerman et al</copyright-holder>
+        <license license-type="open-access">
+          <ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/">https://creativecommons.org/licenses/by/4.0/</ali:license_ref>
+          <license-p>This document is distributed under a Creative Commons
+Attribution 4.0 International license.</license-p>
+        </license>
+      </permissions>
+      <abstract>
+        <p><bold>STAGE</bold>: Draft.</p>
+        <p><bold>AUDIENCE</bold>: Researchers capable of signing git commits
+from the command line who would like some of their research documents to
+enjoy new benefits described in this document.</p>
+        <p><bold>SUMMARY</bold>: The Digital Succession Identifier (DSI) is a
+new kind of persistent identifier for bibliographic references. For
+research communication, a DSI provides novel benefits such as the
+identification of research documents that are amendable by the author. A
+DSI together with JATS XML can also provide a new combination of
+benefits found in traditional academic publishing, preprint servers and
+PubMed Central, while avoiding some of their limitations.</p>
+      </abstract>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="introduction">
+      <title>Introduction</title>
+      <p>For an author, a key benefit of a Digital Succession Identifier
+  (DSI) is the ability to identify content to be determined in the
+  future, by the author. At the same time, a DSI also provides one of
+  the great features of academic publishing, specifically, the ability
+  for other researchers to reference a static archived article long into
+  the future. When a DSI is combined with
+  <ext-link ext-link-type="uri" xlink:href="https://en.wikipedia.org/w/index.php?title=Journal_Article_Tag_Suite">JATS
+  XML</ext-link>
+  <xref alt="1" rid="ref-enwikiU003A1107458581" ref-type="bibr">1</xref>,
+  a new combination of benefits of the current academic publishing
+  ecosystem are enabled:</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>a persistent identifier for bibliographic references (like a
+      <ext-link ext-link-type="uri" xlink:href="https://en.wikipedia.org/w/index.php?title=Digital_object_identifier">DOI</ext-link>
+      <xref alt="2" rid="ref-enwikiU003A1110508394" ref-type="bibr">2</xref>),</p>
+        </list-item>
+        <list-item>
+          <p>an amendable sequence of documents (like versioned
+      preprints),</p>
+        </list-item>
+        <list-item>
+          <p>and a choice of reading format (web page or PDF).</p>
+        </list-item>
+      </list>
+      <p>In addition to that new combination, a DSI also provides completely
+  new benefits in research communication:</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>a DSI can be author-owned and not tied to any particular
+      website or archive,</p>
+        </list-item>
+        <list-item>
+          <p>fine-grained versioning in the form of <italic>multilevel
+      edition numbering</italic> (described later in this document),
+      and</p>
+        </list-item>
+        <list-item>
+          <p>a DSI can be created and tied to a document before either is
+      publicly shared.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="amendable-digital-successions">
+      <title>Amendable digital successions</title>
+      <p>Like textbooks and preprints, but not traditional journal articles,
+  digital successions consist of multiple editions (or versions) of a
+  digital object. A simple initial application is having the digital
+  objects be PDF files.</p>
+      <p>A DSI can refer to a specific edition (version) or an entire
+  sequence of editions within a digital succession. If a DSI refers to a
+  specific edition, that edition does not change, like with traditional
+  journal articles. For instance,
+  <bold>dsi:</bold><monospace>aEBkfZe1f4ooWcgt2Qs9gjtmkFo/0.1</monospace>
+  identifies the first archived draft of this document, edition 0.1.
+  This edition 0.1 will never change. But if a DSI refers to many
+  editions in a digital succession, then the author can amend the
+  previous editions. For example,
+  <bold>dsi:</bold><monospace>aEBkfZe1f4ooWcgt2Qs9gjtmkFo</monospace>
+  refers to all editions of this document, including future editions yet
+  to be determined by the author.</p>
+      <sec id="author-owned-identifiers">
+        <title>Author-owned identifiers</title>
+        <p>A digital succession is a work by an author, as declared by the
+    author as it changes over time. Unlike a traditional journal
+    article, a digital succession is not a single final published
+    result. In contrast to multiple versions of preprints on a preprint
+    servers, a digital succession is not a sequence of deposits at a
+    particular preprint server. A DSI identifies an authors work
+    independent of where it might be stored or viewed.</p>
+        <p>The editions of a digital succession might span preprints found
+    on multiple preprint servers, a published journal article and
+    amended editions on new venues of scholarly communication. A digital
+    succession and its DSI also do not need a central registry or
+    authority to be created and tied together. A DSI can be used
+    privately to identify a digital succession before it is shared
+    publicly.</p>
+        <p>An author determines what editions are in a digital succession
+    because a digital succession is digitally signed by the author,
+    specifically with a
+    <ext-link ext-link-type="uri" xlink:href="https://en.wikipedia.org/wiki/Pretty_Good_Privacy">PGP
+    key</ext-link>
+    <xref alt="3" rid="ref-enwikiU003A1108847090" ref-type="bibr">3</xref>
+    of the author.</p>
+      </sec>
+    </sec>
+    <sec id="choice-of-reading-format">
+      <title>Choice of reading format</title>
+      <p>Although technically independent of the DSI standard, JATS XML is
+  combined with DSIs in software and services under development, such as
+  the
+  <ext-link ext-link-type="uri" xlink:href="https://perm.pub/czdv8PyJKF7LneTnaVT6pgAKyh8/0">perm.pub
+  pilot project</ext-link>. The combination DSI plus JATS gives readers
+  the choice of modern web page or PDF formats, as offered by PubMed
+  Central and journal websites.</p>
+    </sec>
+    <sec id="multilevel-edition-numbering">
+      <title>Multilevel edition numbering</title>
+      <p>In the simplest edition numbering scenario, edition numbers are
+  just positive integers, like with textbook editions and preprint
+  version numbers. An optional benefit of digital successions is
+  multilevel edition numbering. Multilevel numbering is found in the
+  numbering of chapters, sections, and subsections (e.g. chapter 2,
+  section 2.4, subsection 2.4.3). Multilevel numbering is also found in
+  software release versions (e.g. software release 2.19.2).</p>
+      <p>Multilevel numbering is particular useful when amending editions
+  with a binary change in the digital object (e.g. PDF file), but not in
+  the intellectual content (e.g. the text in the PDF). The DSI
+  specification does not specify the meaning of different levels in
+  edition numbers apart from larger integers coming after smaller
+  integers and higher level edition numbers identifying subordinate
+  sequences of lower level edition numbers (e.g. the entire sequence of
+  editions numbers 2.1, 2.2, 2.3, ..., can be identified by edition
+  number 2).</p>
+      <sec id="use-of-zeros-in-edition-numbers">
+        <title>Use of zeros in edition numbers</title>
+        <p>Zeros are valid at any level in an edition number, except at the
+    end. An edition number with a zero at any level carries special
+    meaning. These editions are <italic>unlisted</italic> which means
+    they are accessible but should not be listed by default. This is
+    similar conceptually to hidden files of a folder in a file systems.
+    Authors may choose to use this feature in a variety of ways. One way
+    is to use it for editions that are not intended for the main target
+    audience. For instance, they may be used for testing purposes, for
+    drafts, or preliminary releases.</p>
+      </sec>
+    </sec>
+    <sec id="conclusion">
+      <title>Conclusion</title>
+      <p>Digital Succession Identifiers (DSIs) enable three novel benefits
+  to authors of research documents. The fundamental benefit is that DSIs
+  can be author-owned identifiers. A secondary benefit is multilevel
+  edition numbering. The third benefit is a new combination of existing
+  benefits: persistent identification, amendability and a choice of
+  reading format. However, enabling choice of reading format requires
+  combining DSIs with an application such as digital successions of JATS
+  XML.</p>
+      <p>In addition to reaping the benefits of DSIs, early adopters can
+  help improve the definition of the DSI standard and the direction of
+  software and services being developed around the DSI standard.
+  Software for DSIs is under development at
+  <ext-link ext-link-type="uri" xlink:href="https://gitlab.com/popgen.es/hidos">gitlab.com/popgen.es/hidos</ext-link>
+  and an early trial service is available as the
+  <ext-link ext-link-type="uri" xlink:href="https://perm.pub/czdv8PyJKF7LneTnaVT6pgAKyh8/0">perm.pub
+  pilot project</ext-link>. Email the author
+  <ext-link ext-link-type="uri" xlink:href="mailto:castedo@castedo.com">Castedo
+  Ellerman</ext-link> to become an early adopter.</p>
+      <p>For technical details on how DSIs are implemented, see the
+  <ext-link ext-link-type="uri" xlink:href="https://perm.pub/ji2STto1mZ3i2BmnGxbkebejKH4/0">Digital
+  Succession Identifier Specification</ext-link>.</p>
+    </sec>
+    <sec id="references">
+      <title>References</title>
+    </sec>
+  </body>
+  <back>
+    <ref-list>
+      <ref id="ref-enwikiU003A1108847090">
+        <element-citation>
+          <person-group person-group-type="author">
+            <string-name>Wikipedia contributors</string-name>
+          </person-group>
+          <article-title>Pretty good privacy — Wikipedia, the free encyclopedia</article-title>
+          <year iso-8601-date="2022">2022</year>
+          <uri>https://en.wikipedia.org/w/index.php?title=Pretty_Good_Privacy&amp;oldid=1108847090</uri>
+        </element-citation>
+      </ref>
+      <ref id="ref-enwikiU003A1107458581">
+        <element-citation>
+          <person-group person-group-type="author">
+            <string-name>Wikipedia contributors</string-name>
+          </person-group>
+          <article-title>Journal article tag suite — Wikipedia, the free encyclopedia</article-title>
+          <year iso-8601-date="2022">2022</year>
+          <uri>https://en.wikipedia.org/w/index.php?title=Journal_Article_Tag_Suite&amp;oldid=1107458581</uri>
+        </element-citation>
+      </ref>
+      <ref id="ref-enwikiU003A1110508394">
+        <element-citation>
+          <person-group person-group-type="author">
+            <string-name>Wikipedia contributors</string-name>
+          </person-group>
+          <article-title>Digital object identifier — Wikipedia, the free encyclopedia</article-title>
+          <year iso-8601-date="2022">2022</year>
+          <uri>https://en.wikipedia.org/w/index.php?title=Digital_object_identifier&amp;oldid=1110508394</uri>
+        </element-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
