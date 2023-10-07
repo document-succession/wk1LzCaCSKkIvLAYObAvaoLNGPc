@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.2 20190208//EN"
+                  "JATS-archivearticle1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+</journal-title-group>
+<issn></issn>
+<publisher>
+<publisher-name></publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<title-group>
+<article-title>Why Publish Digital Successions</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-5014-4809</contrib-id>
+<name>
+<surname>Ellerman</surname>
+<given-names>E. Castedo</given-names>
+</name>
+<email>castedo@castedo.com</email>
+</contrib>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2023-10-06">
+<day>6</day>
+<month>10</month>
+<year>2023</year>
+</pub-date>
+<permissions>
+<copyright-statement>© 2023, Ellerman et al</copyright-statement>
+<copyright-year>2023</copyright-year>
+<copyright-holder>Ellerman et al</copyright-holder>
+<license license-type="open-access">
+<ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/">https://creativecommons.org/licenses/by/4.0/</ali:license_ref>
+<license-p>This document is distributed under a Creative Commons Attribution 4.0 International license.</license-p>
+</license>
+</permissions>
+<abstract>
+<p><bold>STAGE</bold>: Draft. Feedback welcome.</p>
+<p>Digital successions offer benefits beyond preprints.
+They can be used for other document types,
+such as supplemental material and technical blog posts.
+Additionally, researchers can access these citable documents
+through multiple compatible websites and software applications.
+Despite being distributed across independent platforms,
+authors still retain exclusive control to amend their digital successions.
+Digital successions also provide key benefits of preprints,
+including long-term preservation through archiving,
+preservation of multiple document versions,
+and the ability for authors to add new document versions.
+This allows the research community to cite specific fixed versions
+while also having the option to discover newer versions.</p>
+</abstract>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>Digital successions are preserved in
+  <ext-link ext-link-type="uri" xlink:href="https://en.wikipedia.org/wiki/Git">Git</ext-link>-compatible <xref alt="1" rid="ref-enwikiU003Agit" ref-type="bibr">1</xref> repositories and archives.
+  Three such examples are the <ext-link ext-link-type="uri" xlink:href="https://softwareheritage.org/">Software Heritage Archive</ext-link>,
+  <ext-link ext-link-type="uri" xlink:href="https://github.com">GitHub</ext-link>, and <ext-link ext-link-type="uri" xlink:href="https://gitlab.org">GitLab</ext-link>.
+  See the <xref alt="Relationship to Git" rid="relationship-to-git">Relationship to Git</xref> section for more details.
+  The data archived is the machine-readable content of a document separated from
+  how it is visually presented.
+  The benefits of this separation are discussed in the <xref alt="Diversity of Reading Venues" rid="diversity-of-reading-venues">Diversity of Reading Venues</xref> section.
+  A key component to making separation possible is discussed in the
+  <xref alt="Digital Succession Identifiers" rid="digital-succession-identifiers">Digital Succession Identifiers</xref> (DSI) section.
+  These identifiers can be used for bibliographic references similar to a
+  <ext-link ext-link-type="uri" xlink:href="https://en.wikipedia.org/w/index.php?title=Digital_object_identifier">DOI</ext-link> <xref alt="2" rid="ref-enwikiU003Adoi" ref-type="bibr">2</xref>.
+  This extends one of the great features of traditional academic publishing,
+  namely the ability of researchers to reference
+  a static archived document long into the future.</p>
+</sec>
+<sec id="diversity-of-reading-venues">
+  <title>Diversity of Reading Venues</title>
+  <p>Multiple independent websites and applications can access a digital succession
+  to present the documents contained in the digital succession in various ways.
+  Digital successions are not tied to a single website,
+  allowing readers the freedom to choose between alternative reading venues.</p>
+  <p>As of 2023, the primary application for digital successions is
+  <ext-link ext-link-type="uri" xlink:href="https://baseprints.singlesource.pub">baseprints</ext-link> <xref alt="3" rid="ref-what_is_baseprint" ref-type="bibr">3</xref>
+  based on JATS XML <xref alt="4" rid="ref-enwikiU003Ajats" ref-type="bibr">4</xref>.
+  A digital succession of baseprints gives readers the choice
+  between multiple PDF and web page formats,
+  similar to the choice between PubMed Central and journal websites.</p>
+</sec>
+<sec id="digital-succession-identifiers">
+  <title>Digital Succession Identifiers</title>
+  <p>A Digital Succession Identifier (DSI) <xref alt="5" rid="ref-DSI_spec" ref-type="bibr">5</xref>
+  is an <ext-link ext-link-type="uri" xlink:href="https://www.softwareheritage.org/2020/07/09/intrinsic-vs-extrinsic-identifiers/">intrinsic persistent identifier</ext-link> <xref alt="6" rid="ref-intrinsic_extrinsic_identifiers" ref-type="bibr">6</xref> of a digital succession.
+  It is a textual identifier similar to a
+  <ext-link ext-link-type="uri" xlink:href="https://en.wikipedia.org/w/index.php?title=Digital_object_identifier">DOI</ext-link> <xref alt="2" rid="ref-enwikiU003Adoi" ref-type="bibr">2</xref>
+  or a web address URL. This document is archived in the digital succession with DSI:</p>
+  <preformat>dsi:wk1LzCaCSKkIvLAYObAvaoLNGPc</preformat>
+  <p>This is a <italic>base DSI</italic>, which identifies all contents of a digital succession,
+  both current and future.
+  Similar to textbooks and preprints,
+  digital successions
+  contain multiple editions (or versions) of a digital object such as a
+  <ext-link ext-link-type="uri" xlink:href="https://baseprints.singlesource.pub">baseprint</ext-link> <xref alt="3" rid="ref-what_is_baseprint" ref-type="bibr">3</xref>.
+  A base DSI identifies all the editions of a document added to a digital succession.
+  Usually, readers are interested in the latest edition in the digital succession.</p>
+  <p>An edition number can follow a <italic>base DSI</italic> to identify a specific static edition.
+  For instance:</p>
+  <preformat>dsi:wk1LzCaCSKkIvLAYObAvaoLNGPc/0.4</preformat>
+  <p>identifies a draft edition 0.4 of this document. This edition 0.4 will never change.</p>
+  <sec id="author-owned-identifiers">
+    <title>Author-Owned Identifiers</title>
+    <p>A digital succession is a work by an author, as declared by the author over time.
+    Unlike a traditional journal article, a digital succession is not a single
+    final published result.
+    Unlike preprints on a preprint server,
+    a digital succession is not a sequence of deposits at a specific preprint server.
+    A DSI identifies an author’s work independently of where it is stored or viewed.</p>
+    <p>An author determines the editions in a digital succession by digitally
+    signing the digital succession with an SSH signing key.</p>
+  </sec>
+  <sec id="multilevel-edition-numbering">
+    <title>Multilevel Edition Numbering</title>
+    <p>Multilevel numbering is found in the numbering of
+    chapters, sections, and subsections (e.g., chapter 2, section 2.4, subsection 2.4.3)
+    as well as software release versions (e.g., software release
+    2.19.2).
+    Authors of digital successions can use multilevel numbering to identify editions
+    or stick to simple edition numbers of just positive integers,
+    like textbook editions and preprint version numbers.</p>
+    <p>Multilevel numbering is particularly useful when amending editions with a binary change in
+    the digital object but not in the intellectual content.
+    The DSI specification does not specify the meaning of different levels
+    in edition numbers, except that larger integers come after smaller integers and
+    higher-level edition numbers identify subordinate sequences of lower-level edition numbers
+    (e.g., the entire sequence of editions numbers 2.1, 2.2, 2.3, … can be identified by
+    edition number 2).</p>
+    <sec id="use-of-zeros-in-edition-numbers">
+      <title>Use of Zeros in Edition Numbers</title>
+      <p>Zeros are valid at any level in an edition number, except at the end. An edition number
+      with a zero at any level carries special meaning.
+      These editions are <italic>unlisted</italic>, which means they are accessible but should not be listed
+      by default.
+      This is conceptually similar to hidden files in file systems.
+      Authors may choose to use this feature in various ways,
+      such as for editions not intended for the main target audience,
+      testing purposes, drafts, or preliminary releases.</p>
+    </sec>
+  </sec>
+</sec>
+<sec id="relationship-to-git">
+  <title>Relationship to Git</title>
+  <p>While Git is normally used to store a full history of source code revisions,
+  it is not used for that exact purpose with digital successions.
+  Git is used as a pragmatic implementation layer because it can handle distributed
+  data replication, digital signing, and cryptographic hashes.
+  The only history stored in a digital succession is primarily the history of additions of
+  new editions to the succession.</p>
+</sec>
+<sec id="conclusion">
+  <title>Conclusion</title>
+  <p>As of late 2023, digital successions have been
+  implemented and used by the author for over a year.
+  Authors interested in publishing digital successions can visit
+  <ext-link ext-link-type="uri" xlink:href="https://try.perm.pub/">try.perm.pub</ext-link> to get started.</p>
+  <p>For technical details on how DSIs are implemented, see the <ext-link ext-link-type="uri" xlink:href="https://perm.pub/1wFGhvmv8XZfPx0O5Hya2e9AyXo">Digital Succession
+  Identifier Specification</ext-link> <xref alt="5" rid="ref-DSI_spec" ref-type="bibr">5</xref>
+  or the software library at
+  <ext-link ext-link-type="uri" xlink:href="https://gitlab.com/perm.pub/hidos">gitlab.com/perm.pub/hidos</ext-link>.</p>
+</sec>
+<sec id="acknowledgments">
+  <title>Acknowledgments</title>
+  <p>The OpenAI API with GPT 3.5 performed copyediting of this document.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title>References</title>
+  <ref id="ref-enwikiU003Ajats">
+    <element-citation>
+      <person-group person-group-type="author">
+        <string-name>Wikipedia contributors</string-name>
+      </person-group>
+      <article-title>Journal article tag suite — Wikipedia, the free encyclopedia</article-title>
+      <year iso-8601-date="2023">2023</year>
+      <uri>https://en.wikipedia.org/w/index.php?title=Journal_Article_Tag_Suite&amp;oldid=1172109468</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-enwikiU003Adoi">
+    <element-citation>
+      <person-group person-group-type="author">
+        <string-name>Wikipedia contributors</string-name>
+      </person-group>
+      <article-title>Digital object identifier — Wikipedia, the free encyclopedia</article-title>
+      <year iso-8601-date="2023">2023</year>
+      <uri>https://en.wikipedia.org/w/index.php?title=Digital_object_identifier&amp;oldid=1177404866</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-enwikiU003Agit">
+    <element-citation>
+      <person-group person-group-type="author">
+        <string-name>Wikipedia contributors</string-name>
+      </person-group>
+      <article-title>Git — Wikipedia, the free encyclopedia</article-title>
+      <year iso-8601-date="2023">2023</year>
+      <uri>https://en.wikipedia.org/w/index.php?title=Git&amp;oldid=1177307938</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-what_is_baseprint">
+    <element-citation publication-type="webpage">
+      <person-group person-group-type="author">
+        <name><surname>Ellerman</surname><given-names>E. Castedo</given-names></name>
+      </person-group>
+      <article-title>What is a baseprint?</article-title>
+      <year iso-8601-date="2023">2023</year>
+      <uri>https://perm.pub/HKSI5NPzMFmgRlb4Vboi71OTKYo3/1</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-DSI_spec">
+    <element-citation publication-type="webpage">
+      <person-group person-group-type="author">
+        <name><surname>Ellerman</surname><given-names>E. Castedo</given-names></name>
+      </person-group>
+      <article-title>Digital succession identifiers</article-title>
+      <year iso-8601-date="2023">2023</year>
+      <uri>https://perm.pub/1wFGhvmv8XZfPx0O5Hya2e9AyXo/1</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-intrinsic_extrinsic_identifiers">
+    <element-citation publication-type="webpage">
+      <person-group person-group-type="author">
+        <name><surname>Heritage</surname><given-names>Software</given-names></name>
+      </person-group>
+      <article-title>Intrinsic and extrinsic identifiers</article-title>
+      <year iso-8601-date="2020">2020</year>
+      <uri>https://web.archive.org/web/20221019201056/https://www.softwareheritage.org/2020/07/09/intrinsic-vs-extrinsic-identifiers/</uri>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
